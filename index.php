@@ -6,59 +6,7 @@
 -->
 <html>
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>MKM</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by GetTemplates.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="GetTemplates.co" />
-
-	<!-- Facebook and Twitter integration -->
-	<meta property="og:title" content="" />
-	<meta property="og:image" content="" />
-	<meta property="og:url" content="" />
-	<meta property="og:site_name" content="" />
-	<meta property="og:description" content="" />
-	<meta name="twitter:title" content="" />
-	<meta name="twitter:image" content="" />
-	<meta name="twitter:url" content="" />
-	<meta name="twitter:card" content="" />
-
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
-
-	<!-- Animate.css -->
-	<link rel="stylesheet" href="css/animate.css">
-	<!-- Icomoon Icon Fonts-->
-	<link rel="stylesheet" href="css/icomoon.css">
-	<!-- Themify Icons-->
-	<link rel="stylesheet" href="css/themify-icons.css">
-	<!-- Bootstrap  -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-
-	<!-- Magnific Popup -->
-	<link rel="stylesheet" href="css/magnific-popup.css">
-
-	<!-- Bootstrap DateTimePicker -->
-	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
-
-	<!-- Owl Carousel  -->
-	<link rel="stylesheet" href="css/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/owl.theme.default.min.css">
-
-	<!-- Theme style  -->
-	<link rel="stylesheet" href="css/style.css">
-
-	<!-- Modernizr JS -->
-	<script src="js/modernizr-2.6.2.min.js"></script>
-	<!-- FOR IE9 below -->
-	<!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-</head>
+<?php require 'header_ref.php' ?>
 
 <body>
 
@@ -96,26 +44,26 @@
 										<div class="tab-content">
 											<div class="tab-content-inner active" data-content="signup">
 												<!-- <h3 class="cursive-font">Book Online</h3> -->
-												<form action="#">
+												<form method="post" action="booking.php">
 
 													<div class="row form-group">
 														<div class="col-md-12">
 															<label for="date-start">Check in</label>
-															<input type="text" id="checkin" class="form-control" required>
+															<input type="text" id="checkin" name="checkin" pattern="\d{1,2}/\d{1,2}/\d{4}" class="form-control" required>
 														</div>
 													</div>
 
 													<div class="row form-group">
 														<div class="col-md-12">
 															<label for="date-start">Check out</label>
-															<input type="text" id="checkout" class="form-control" required>
+															<input type="text" id="checkout" name="checkout" pattern="\d{1,2}/\d{1,2}/\d{4}" class="form-control" required>
 														</div>
 													</div>
 
 													<div class="row form-group">
 														<div class="col-md-12">
 															<label for="activities">Adults</label>
-															<select name="#" id="adults" class="form-control" required>
+															<select name="#" id="adults" name="adults" class="form-control" required>
 																<option disabled>Select One</option>
 																<option>1</option>
 																<option>2</option>
@@ -129,7 +77,7 @@
 													<div class="row form-group">
 														<div class="col-md-12">
 															<label for="activities">Children</label>
-															<select name="#" id="children" class="form-control">
+															<select name="#" id="children" name="children" class="form-control">
 																<option selected>0</option>
 																<option>1</option>
 																<option>2</option>

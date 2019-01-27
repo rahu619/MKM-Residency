@@ -10,7 +10,7 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li class="has-dropdown">
-                        <a href="services.html">Amenities</a>
+                        <a href="services.php">Amenities</a>
                         <ul class="dropdown">
                             <li><a href="#">Pool</a></li>
                             <li><a href="#">Fitness Club</a></li>

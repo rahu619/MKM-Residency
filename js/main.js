@@ -300,12 +300,23 @@
 
 	var dateTimeForm = function () {
 		// $('#date-start').datepicker();
-		$('#checkin,#checkout').datetimepicker({
-			format: 'DD/MM/YYYY'
+		$('#checkin').datetimepicker({
+			format: 'DD/MM/YYYY',
+			minDate: new Date(),
+			disabledDates: [new Date(new Date() - (1000 * 60 * 60 * 24 * 1))],
+			defaultDate: new Date()
 		});
-		$('#time').datetimepicker({
-			format: 'LT'
+
+		$('#checkout').datetimepicker({
+			format: 'DD/MM/YYYY',
+			minDate: new Date(),
+			disabledDates: [new Date(new Date() - (1000 * 60 * 60 * 24 * 1))],
+			defaultDate: new Date()
 		});
+
+		// $('#time').datetimepicker({
+		// 	format: 'LT'
+		// });
 
 
 	};
