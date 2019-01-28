@@ -2278,3 +2278,29 @@ select.form-control option {
 .ti-calendar {
   font-size: 21px;
 }
+
+.package_row {
+  box-sizing: border-box;
+  background-color: #cdc8c8;
+  border: 1px solid #cdc8c8;
+  box-shadow: 2px 2px 0 #dcdcdc;
+  height: 250px;
+}
+
+.package_img {
+  height: 200px;
+}
+
+.book {
+  bottom: 5;
+  position: absolute;
+}
+
+#content-box {
+  background-color: #e3e5e8;
+}
+
+#bookingtitle {
+  margin: 15px;
+  font-size: x-large;
+}

@@ -35,7 +35,7 @@ if(isset($_POST['checkin']) ){
 }
  ?>
 
-
+<!-- Filter -->
  <div class="gtco-section">
 			<div class="gtco-container">
 				<div class="row">
@@ -87,6 +87,68 @@ if(isset($_POST['checkin']) ){
 				</div>
 			</div>
 </div>
+
+<!-- Content -->
+<article style="box-sizing: border-box;">
+	<div class="row">
+		<div id="content-box" class="col-sm-12">
+        <div id="bookingtitle">Your Bookings</div>
+
+
+		<div class="gtco-section">
+			<div class="gtco-container">
+				<div class="row">
+				<div class="col-md-1">
+				</div>
+					<div class="col-md-8">
+
+					<!-- Show room rows -->
+					<div class="package_row">
+						<div class="col-md-4">
+							<div class="package_img" style="background:url(images/img_3.jpg) no-repeat center center;"></div>
+						</div>
+						<div class="col-md-4">
+								<div class="card-body d-flex flex-column">
+											<h3 class="card-title pricing-card-title">Standard Room</h3>
+											<p>Option to pay directly at the hotel.
+											</p>
+										
+											
+								</div>
+						</div>
+						<div class="col-md-4">
+							<!-- Rate details -->
+							<div class="card-body d-flex flex-column">
+									<h1 class="card-title pricing-card-title">₹4000 <small class="text-muted">onwards</small></h1>
+									<ul class="list-unstyled mt-3 mb-4">
+									<li>Tax exclusive</li>
+									<li>Complimentary breakfast</li>
+									</ul>
+									<button type="button" class="align-self-end btn btn-lg btn-block btn-danger" style="margin-top: auto;">Book Now</button>
+    						 </div>
+							
+						</div>
+					</div>
+
+					</div>
+					
+					<div class="col-md-4">
+
+					</div>
+				</div>
+
+			</div>
+</div>
+
+
+
+
+		</div>
+	</div>
+</article>
+
+
+
 
 <!-- Footer -->
 <?php include("footer.php")?>

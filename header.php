@@ -18,7 +18,7 @@
                         </ul>
                     </li>
                     <li><a href="contact.php">Contact</a></li>
-                    <li class="btn-cta"><a href="#"><span>Reservation</span></a></li>
+                    <li class="btn-cta"><a href="booking.php"><span>Reservation</span></a></li>
                 </ul>
             </div>
         </div>
