@@ -580,6 +580,10 @@ figure {
   height: 600px;
 }
 
+.gtco-cover.gtco-cover-booking {
+  height: 80px;
+}
+
 @media screen and (max-width: 768px) {
   .gtco-cover.gtco-cover-sm {
     height: 400px;
@@ -2268,5 +2272,9 @@ form label {
 
 select.form-control option {
   color: #000;
-  font-weight: 600;
+  font-weight: 500;
+}
+
+.ti-calendar {
+  font-size: 21px;
 }

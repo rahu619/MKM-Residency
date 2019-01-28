@@ -63,7 +63,7 @@
 													<div class="row form-group">
 														<div class="col-md-12">
 															<label for="activities">Adults</label>
-															<select name="#" id="adults" name="adults" class="form-control" required>
+															<select id="adults" name="adults" class="form-control" required>
 																<option disabled>Select One</option>
 																<option>1</option>
 																<option>2</option>
@@ -77,7 +77,7 @@
 													<div class="row form-group">
 														<div class="col-md-12">
 															<label for="activities">Children</label>
-															<select name="#" id="children" name="children" class="form-control">
+															<select id="children" name="children" class="form-control">
 																<option selected>0</option>
 																<option>1</option>
 																<option>2</option>

@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-	Aesthetic by gettemplates.co
-	Twitter: http://twitter.com/gettemplateco
-	URL: http://gettemplates.co
--->
 <html>
 
 <?php require 'header_ref.php' ?>
@@ -16,7 +11,7 @@
 
 		<!-- Menu -->
 		<?php include("header.php"); ?>
-		<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner">
+		<header id="gtco-header" class="gtco-cover gtco-cover-booking" role="banner">
 
 		</header>
 
@@ -27,16 +22,16 @@
 
 if(isset($_POST['checkin']) ){
 
-	$CHECKIN= htmlspecialchars($_POST['checkin']);
-	$CHECKOUT= htmlspecialchars($_POST['checkout']);
-	$ADULTS=1;
-	$CHILDREN=0;
+	// $CHECKIN= htmlspecialchars($_POST['checkin']);
+	// $CHECKOUT= htmlspecialchars($_POST['checkout']);
+	// $ADULTS=1;
+	// $CHILDREN=0;
 	 
-	if(!empty($_POST['adults']))
-		$ADULTS= $_POST['adults'];
+	// if(!empty($_POST['adults']))
+	// 	$ADULTS= $_POST['adults'];
 	
-	if(!empty($_POST['children']))
-	   $CHILDREN= $_POST['children'];
+	// if(!empty($_POST['children']))
+	//    $CHILDREN= $_POST['children'];
 }
  ?>
 
@@ -44,7 +39,51 @@ if(isset($_POST['checkin']) ){
  <div class="gtco-section">
 			<div class="gtco-container">
 				<div class="row">
-					<div class="col-md-12"></div>
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-3">
+						<div class="form-group has-feedback">
+							<label for="checkin" class="control-label">Check in</label>
+							<input id="checkin" autocomplete="off" class="form-control" type="text"/> 
+							<i class="ti-calendar form-control-feedback"></i>
+						</div>
+					</div>
+					<div class="col-md-3">
+					     <div class="form-group has-feedback">
+							<label for="checkout" class="control-label">Check out</label>
+							<input id="checkout" autocomplete="off" class="form-control" type="text"/> 
+							<i class="ti-calendar form-control-feedback"></i>
+						  </div>
+					</div>
+
+					<div class="col-md-1">
+						<div class="form-group has-feedback">
+							<label for="adults" class="control-label">Adults</label>
+							<select  id="adults" class="form-control">
+										<option disabled selected>- Select -</option>
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5+</option>
+							</select>
+						</div>
+					</div>
+					<div class="col-md-1">
+						<div class="form-group has-feedback">
+							<label for="children" class="control-label">Children</label>
+							<select id="children" name="children" class="form-control">
+										<option disabled selected>- Select -</option>
+										<option>0</option>
+										<option>1</option>
+										<option>2</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="col-md-2">
+					</div>
+
 				</div>
 			</div>
 </div>
@@ -52,33 +91,26 @@ if(isset($_POST['checkin']) ){
 <!-- Footer -->
 <?php include("footer.php")?>
 
-<script src="js/jquery.min.js"></script>
-	<!-- jQuery Easing -->
-	<script src="js/jquery.easing.1.3.js"></script>
-	<!-- Bootstrap -->
-	<script src="js/bootstrap.min.js"></script>
-	<!-- Waypoints -->
-	<script src="js/jquery.waypoints.min.js"></script>
-	<!-- Carousel -->
-	<script src="js/owl.carousel.min.js"></script>
-	<!-- countTo -->
-	<script src="js/jquery.countTo.js"></script>
+<?php require "script_ref.php"?>
 
-	<!-- Stellar Parallax -->
-	<script src="js/jquery.stellar.min.js"></script>
+<script>
+   var data=new Array();
+   $(function () {
+		data = JSON.parse('<?php echo json_encode($_POST)?>');
 
-	<!-- Magnific Popup -->
-	<script src="js/jquery.magnific-popup.min.js"></script>
-	<script src="js/magnific-popup-options.js"></script>
+		if(data!=null){
+			$("#checkin").val(data.checkin);
+			$("#checkout").val(data.checkout);
+			$("#adults").val(data.adults);
+			$("#children").val(data.chidren);
+		}
+	});
 
-	<script src="js/moment.min.js"></script>
-	<script src="js/bootstrap-datetimepicker.min.js"></script>
-
-
-	<!-- Main -->
-	<script src="js/main.js"></script>
+</script>
 
 </body>
+
+
 
 </html>
 
