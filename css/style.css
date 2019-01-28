@@ -104,6 +104,10 @@ figure {
   padding-right: 15px;
 }
 
+.toppadding {
+  margin-top: 15px;
+}
+
 .gtco-nav {
   position: absolute;
   top: 0;
@@ -2281,10 +2285,14 @@ select.form-control option {
 
 .package_row {
   box-sizing: border-box;
-  background-color: #cdc8c8;
-  border: 1px solid #cdc8c8;
+  background-color: #edeff2;
+  border: 1px solid #a8aaad;
   box-shadow: 2px 2px 0 #dcdcdc;
   height: 250px;
+}
+
+.package_row div.col-md-4 {
+  margin-top: 8px;
 }
 
 .package_img {
