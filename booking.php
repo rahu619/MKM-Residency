@@ -90,6 +90,8 @@ if(isset($_POST['checkin']) ){
 
 <!-- Content -->
 <article style="box-sizing: border-box;">
+
+<div class="col-md-9">
 	<div class="row">
 		<div id="content-box" class="col-sm-12">
         <div id="bookingtitle">Your Bookings</div>
@@ -98,7 +100,7 @@ if(isset($_POST['checkin']) ){
 				<div class="row">
 				<div class="col-md-1">
 				</div>
-					<div class="col-md-8">
+				<div class="col-md-10">
 
 					<!-- Show room rows -->
 					<div class="package_row">
@@ -129,10 +131,8 @@ if(isset($_POST['checkin']) ){
 					</div>
 
 					</div>
-					
-					<div class="col-md-4">
-
-					</div>
+					<div class="col-md-1"></div>
+			
 				</div>
 
 			</div>
@@ -143,7 +143,7 @@ if(isset($_POST['checkin']) ){
 				<div class="row">
 				<div class="col-md-1">
 				</div>
-					<div class="col-md-8">
+					<div class="col-md-10">
 
 					<!-- Show room rows -->
 					<div class="package_row">
@@ -173,11 +173,11 @@ if(isset($_POST['checkin']) ){
 						</div>
 					</div>
 
-					</div>
-					
-					<div class="col-md-4">
+					<div class="col-md-1"></div>
 
 					</div>
+					
+				
 				</div>
 
 			</div>
@@ -186,7 +186,25 @@ if(isset($_POST['checkin']) ){
 
 		</div>
 	</div>
+
+	</div>
+
+
+
+  <!-- right side -->
+
+  <div class="col-md-3 rightDiv">
+	<div class="card-body d-flex flex-column">
+			<h3 class="card-title pricing-card-title text-center">Total Charge</h3>
+			<hr class="horizontalLine">
+			<button type="button" class="align-self-end btn btn-lg btn-block btn-danger" style="margin-top: auto;">Confirm</button>
+	</div>
+
+</div>
+
+
 </article>
+
 
 
 

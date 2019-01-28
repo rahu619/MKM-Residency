@@ -2312,3 +2312,11 @@ select.form-control option {
   margin: 15px;
   font-size: x-large;
 }
+
+.rightDiv {
+  float: right;
+}
+
+.horizontalLine {
+  border: 1px solid #DFDADA;
+}
