@@ -2,7 +2,7 @@
 <html>
 
 <?php require 'header_ref.php' ?>
-
+<link href="css/availability-calendar.css" rel="stylesheet" type="text/css">
 <body>
 
 <div class="gtco-loader"></div>
@@ -87,6 +87,20 @@ if(isset($_POST['checkin']) ){
 				</div>
 			</div>
 </div>
+
+
+<!-- Calendar -->
+<div class="gtco-calendar">
+			<div class="gtco-container">
+				<div class="row" style="padding-bottom:20px;">
+				<div class="col-md-1"></div>
+					<div class="col-md-10">
+						<div id="calendar"></div>
+					</div>
+				<div class="col-md-1"></div>
+				</div>
+			</div>
+ </div>
 
 <!-- Content -->
 <article style="box-sizing: border-box;">
@@ -196,7 +210,11 @@ if(isset($_POST['checkin']) ){
   <div class="col-md-3 rightDiv">
 	<div class="card-body d-flex flex-column">
 			<h3 class="card-title pricing-card-title text-center">Total Charge</h3>
-			<hr class="horizontalLine">
+			 <hr class="horizontalLine">
+				<div class="col-md-12 text-center roompriceCol">
+					<span> INR 5000</span>
+				</div>
+			<div class="col-md-12 text-center"></div>
 			<button type="button" class="align-self-end btn btn-lg btn-block btn-danger" style="margin-top: auto;">Confirm</button>
 	</div>
 
@@ -214,7 +232,19 @@ if(isset($_POST['checkin']) ){
 
 <?php require "script_ref.php"?>
 
+<!-- <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<script src="js/availability-calendar.js"></script>
 <script>
+
+// Calendar
+
+var unavailableDates = [
+	{start: '2019-01-20', end: '2019-01-30'},
+    {start: '2019-01-01', end: '2019-01-01'}
+];
+
+$('#calendar').availabilityCalendar(unavailableDates);
+
    var data=new Array();
    $(function () {
 		data = JSON.parse('<?php echo json_encode($_POST)?>');
@@ -225,9 +255,16 @@ if(isset($_POST['checkin']) ){
 			$("#adults").val(data.adults);
 			$("#children").val(data.chidren);
 		}
+
+
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	});
 
 </script>
+
+
 
 </body>
 
