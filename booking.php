@@ -122,17 +122,14 @@ if(isset($_POST['checkin']) ){
 							<div class="package_img" style="background:url(images/img_3.jpg) no-repeat center center;background-size: cover;"></div>
 						</div>
 						<div class="col-md-4">
-								<div class="card-body d-flex flex-column">
-											<h3 class="card-title pricing-card-title">Standard Room</h3>
-											<p>Option to pay directly at the hotel.
-											</p>
-										
-											
+								<div class="card-body d-flex flex-column flex-row-reverse">
+									<h3 class="card-title pricing-card-title">Standard Room</h3>
+									<p>Option to pay directly at the hotel.</p>	
 								</div>
 						</div>
 						<div class="col-md-4">
 							<!-- Rate details -->
-							<div class="card-body d-flex flex-column">
+							<div class="card-body d-flex flex-column flex-row-reverse">
 									<h1 class="card-title pricing-card-title">₹4000 <small class="text-muted">onwards</small></h1>
 									<ul class="list-unstyled mt-3 mb-4">
 									<li>Tax exclusive</li>
@@ -157,23 +154,25 @@ if(isset($_POST['checkin']) ){
 				<div class="row">
 				<div class="col-md-1">
 				</div>
-					<div class="col-md-10">
 
+
+
+					<div class="col-md-10">
 					<!-- Show room rows -->
-					<div class="package_row">
+					<div class="package_row flex-row-reverse">
 						<div class="col-md-4">
 							<div class="package_img" style="background:url(images/img_1.jpg) no-repeat center center;background-size: cover;"></div>
 						</div>
 						<div class="col-md-4">
-								<div class="card-body d-flex flex-column">
+								<div class="card-body d-flex flex-column flex-row-reverse">
 											<h3 class="card-title pricing-card-title">Exclusive Room</h3>
-											<p>Option to pay directly at the hotel.
-											</p>
+											<p>Option to pay directly at the hotel.</p>
 										
 											
-								</div>
+						</div>
 						</div>
 						<div class="col-md-4">
+						<div class="flex-row-reverse">	
 							<!-- Rate details -->
 							<div class="card-body d-flex flex-column">
 									<h1 class="card-title pricing-card-title">₹7000 <small class="text-muted">onwards</small></h1>
@@ -183,9 +182,13 @@ if(isset($_POST['checkin']) ){
 									</ul>
 									<button type="button" class="align-self-end btn btn-lg btn-block btn-danger" style="margin-top: auto;">Book Now</button>
     						 </div>
-							
+							 </div>
 						</div>
+					
+					
 					</div>
+
+
 
 					<div class="col-md-1"></div>
 
@@ -209,6 +212,7 @@ if(isset($_POST['checkin']) ){
 
   <div class="col-md-3 rightDiv">
 	<div class="card-body d-flex flex-column">
+		<div class="flex-row-reverse">
 			<h3 class="card-title pricing-card-title text-center">Total Charge</h3>
 			 <hr class="horizontalLine">
 				<div class="col-md-12 text-center roompriceCol">
@@ -216,6 +220,7 @@ if(isset($_POST['checkin']) ){
 				</div>
 			<div class="col-md-12 text-center"></div>
 			<button type="button" class="align-self-end btn btn-lg btn-block btn-danger" style="margin-top: auto;">Confirm</button>
+	   </div>
 	</div>
 
 </div>

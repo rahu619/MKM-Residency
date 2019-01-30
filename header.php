@@ -4,11 +4,11 @@
 
         <div class="row">
             <div class="col-sm-4 col-xs-12">
-                <div id="gtco-logo"><a href="index.php">MKM Residency<em>.</em></a></div>
+                <div id="gtco-logo"><a href="home.php">MKM Residency<em>.</em></a></div>
             </div>
             <div class="col-xs-8 text-right menu-1">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
+                    <li><a href="home.php">Home</a></li>
                     <li class="has-dropdown">
                         <a href="services.php">Amenities</a>
                         <ul class="dropdown">
@@ -19,7 +19,31 @@
                     </li>
                     <li><a href="contact.php">Contact</a></li>
                     <li class="btn-cta"><a href="booking.php"><span>Reservation</span></a></li>
-                </ul>
+
+
+                    <?php
+                        //session check to display login
+                   
+                   ?>
+                    <!-- Login -->
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle"  href="#" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-log-in"></span> 
+                            Login
+                            </a>
+
+
+                            <div class="dropdown-menu p-5 mx-auto">
+                                <form class="form-horizontal" method="post" accept-charset="UTF-8">
+                                    <input class="form-control login" type="text" name="username" placeholder="Username">
+                                    <input class="form-control login" type="text" name="password" placeholder="Password">
+                                    <input class="btn btn-primary" type="button" name="submit" value="Login">
+                                </form>
+                            </div>
+
+                        </li>
+                    </ul>
+
             </div>
         </div>
 

@@ -1250,6 +1250,13 @@ form label {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.copyright {
+  color: #666666;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  bottom: 0;
+}
+
 @media screen and (max-width: 768px) {
 
   #gtco-footer .copyright .pull-left,
