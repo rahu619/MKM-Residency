@@ -20,28 +20,38 @@
                     <li><a href="contact.php">Contact</a></li>
                     <li class="btn-cta"><a href="booking.php"><span>Reservation</span></a></li>
 
+                   <?php session_start();?>
 
-                    <?php
-                        //session check to display login
-                   
-                   ?>
+                   <?php if (!isset($_SESSION["userID"])) {?>
                     <!-- Login -->
-                    <li class="nav-item dropdown">
+                     <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle"  href="#" data-toggle="dropdown">
-                            <span class="glyphicon glyphicon-log-in"></span> 
+                            <span class="glyphicon glyphicon-log-in"></span>
                             Login
                             </a>
 
 
                             <div class="dropdown-menu p-5 mx-auto">
-                                <form class="form-horizontal" method="post" accept-charset="UTF-8">
+                                <form class="form-horizontal" method="post" action="./controllers/login.php" accept-charset="UTF-8">
                                     <input class="form-control login" type="text" name="username" placeholder="Username">
-                                    <input class="form-control login" type="text" name="password" placeholder="Password">
-                                    <input class="btn btn-primary" type="button" name="submit" value="Login">
+                                    <input class="form-control login" type="password" name="password" placeholder="Password">
+                                    <input class="btn btn-primary" type="submit" value="Login">
                                 </form>
                             </div>
 
                         </li>
+
+
+                   <?php } else {?>
+                    <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="logout.php?signout=true">
+                            <span class="glyphicon glyphicon-log-in"></span>
+                                Log out
+                            </a>
+                    </li>
+                   <?php }?>
+
+
                     </ul>
 
             </div>
