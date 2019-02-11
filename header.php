@@ -8,6 +8,11 @@
             </div>
             <div class="col-xs-8 text-right menu-1">
                 <ul>
+
+                <?php session_start();
+if (!isset($_SESSION["userID"])) {
+    ?>
+
                     <li><a href="home.php">Home</a></li>
                     <li class="has-dropdown">
                         <a href="services.php">Amenities</a>
@@ -20,9 +25,6 @@
                     <li><a href="contact.php">Contact</a></li>
                     <li class="btn-cta"><a href="booking.php"><span>Reservation</span></a></li>
 
-                   <?php session_start();?>
-
-                   <?php if (!isset($_SESSION["userID"])) {?>
                     <!-- Login -->
                      <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle"  href="#" data-toggle="dropdown">
